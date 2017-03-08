@@ -2,7 +2,7 @@ var myRequest = new XMLHttpRequest();
 var TreeHouseContainer = document.getElementById("TreeHouseContainer");
 
 function makeDom(xhrData){ 
-	console.log("my xhrData",xhrData);   
+	// console.log("my xhrData",xhrData);   
     var TreeHouseString ;
     var currentTreeHouse;
 
@@ -12,11 +12,10 @@ function makeDom(xhrData){
         TreeHouseString += `<div class="thumbnail">`;
         TreeHouseString += `<img src=${xhrData.badges[x].icon_url} >`;
         TreeHouseString += `<p> ${xhrData.badges[x].name} </p>`;
-        // TreeHouseString += `<h3>${xhrData.gravatar_hash}</h3>`;
-        // TreeHouseString += `<p>${xhrData.points}</p>`;
         TreeHouseString += `</div></div>`;
 
     }
+
     TreeHouseContainer.innerHTML += TreeHouseString;
     // console.log("myname is  : " , xhrData.name);
 }
